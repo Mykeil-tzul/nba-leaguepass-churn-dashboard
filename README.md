@@ -33,8 +33,8 @@ This project simulates the role of a **Visa Insights Analyst** or **FanDuel Prod
 - **Churn Simulation**:
   - Fans who watched **< 8 games** = labeled as **"Churned"**
   - Engagement tiers created:
-    - `Low` = < 8 games
-    - `Mid` = 8–20 games
+    - `Low` = < 8 games  
+    - `Mid` = 8–20 games  
     - `High` = > 20 games
 
 ---
@@ -51,7 +51,7 @@ CASE
   ELSE 'Retained'
 END AS churn_status
 
-Engagement Tiers
+### 🧮 🎯 Engagement Tiers
 
 CASE 
   WHEN games_watched < 8 THEN 'Low'
@@ -59,13 +59,8 @@ CASE
   ELSE 'High'
 END AS engagement_tier
 
-CASE 
-  WHEN games_watched < 8 THEN 'Low'
-  WHEN games_watched BETWEEN 8 AND 20 THEN 'Mid'
-  ELSE 'High'
-END AS engagement_tier
 
-Churn Rate + Averages
+### 🧮 📈 Churn Rate + Averages
 
 SELECT 
   engagement_tier,
@@ -75,28 +70,39 @@ SELECT
 FROM fan_data
 GROUP BY engagement_tier;
 
+###
+
+---
+
 ## 💡 Business Insights & Recommendations
 
 ### 🟥 Low-Tier Fans (100% churn)
-- **Problem**: Watched fewer than 8 games  
-- **Action**: Target with highlight reels, welcome emails, and push notifications
+
+**Problem**: Watched fewer than 8 games  
+**Action**: Send welcome emails, highlights, and push notifications early in the season to re-engage these fans before they churn.
+
+---
 
 ### 🟧 Mid-Tier Fans (~45% churn)
-- **Problem**: Moderately engaged, but not loyal  
-- **Action**: Offer bundle promos, favorite team alerts, or retention rewards
+
+**Problem**: Moderately engaged, but not loyal  
+**Action**: Introduce promos, team alert features, and mid-season offers to convert them into high-tier fans.
+
+---
 
 ### 🟩 High-Tier Fans (0% churn)
-- **Opportunity**: Most loyal fans  
-- **Action**: Upsell with premium features, referral bonuses, or loyalty rewards
+
+**Opportunity**: Most loyal fans  
+**Action**: Reward with premium features, referral programs, or early access perks to drive retention and advocacy.
 
 ---
 
 ## 🔍 Key Insights
 
-- 🟥 100% churn rate among low-tier fans  
-- ⏱️ Average fan cancels around **Day 53**  
-- 📉 Churn peaks between **Days 40–80**  
-- 🟩 High-tier fans are highly retained and engaged
+- 🟥 **100% churn** among low-tier fans  
+- ⏱️ Average churn occurs around **Day 53**  
+- 📉 Churn spikes between **Days 40–80**  
+- 🟩 High-tier fans show **0% churn** and strong engagement
 
 ---
 
@@ -114,56 +120,31 @@ GROUP BY engagement_tier;
 
 ## ⚙️ Tools & Tech Stack
 
-| 🧰 **Tool**     | 🔍 **Purpose**                                |
-|----------------|------------------------------------------------|
-| **DuckDB**     | SQL queries on local CSV files                |
+| 🧰 **Tool**     | 🔍 **Purpose**                                 |
+|----------------|-------------------------------------------------|
+| **DuckDB**     | SQL queries on local CSV files                  |
 | **Python**     | Simulate NBA League Pass data (`simulate_fans.py`) |
-| **Tableau**    | Visual storytelling & executive dashboards    |
-| **GitHub**     | Version control and project hosting           |
+| **Tableau**    | Visual storytelling & executive dashboards      |
+| **GitHub**     | Version control and project hosting             |
 
 ---
 
 ## 🧠 What I Learned
 
-- How to simulate churn and segment users using Python & SQL  
-- Translating raw behavior into KPIs that drive business decisions  
-- Designing an **executive-ready Tableau dashboard**  
-- Building a polished, employer-facing GitHub project  
-
----
-
-## 🔗 Real-World Alignment
-
-This project simulates real analyst workflows at:
-
-- 🏀 **NBA / League Pass** – Fan segmentation and re-engagement  
-- 💳 **Visa** – Tracking cardholder churn and behavior trends  
-- 🎮 **FanDuel / DraftKings** – Reducing churn through behavioral insights
+- How to simulate churn and segment users using SQL + Python  
+- How to model KPIs and business questions using DuckDB  
+- How to turn raw data into visual stories using Tableau  
+- How to align projects with roles in sports analytics and fintech
 
 ---
 
 ## 📸 Dashboard Preview
 
-> Tableau dashboard showcasing churn %, cancellation trends, and engagement breakdown:
-
-![NBA League Pass Dashboard](images/dashboard-preview.png)
+![Churn Dashboard](images/nba-leaguepass-dashboard.png)
 
 ---
 
-## 📁 Files in This Repo
-
-| 📂 **File**                       | 📄 **Description**                            |
-|----------------------------------|-----------------------------------------------|
-| `data/simulated_fans.csv`        | Simulated fan dataset                         |
-| `sql/nba_churn_analysis.sql`     | SQL queries for segmentation & KPIs           |
-| `notebooks/simulate_fans.py`     | Python script to simulate user behavior       |
-| `dashboard/leaguepass_dashboard.twbx` | Tableau workbook file                     |
-| `images/dashboard-preview.png`   | Dashboard preview image                       |
-| `README.md`                      | Full project documentation                    |
-
----
-
-## 🗂️ File Structure
+## 🗂️ Project Structure
 
 nba-leaguepass-churn-dashboard/
 ├── data/
@@ -175,21 +156,6 @@ nba-leaguepass-churn-dashboard/
 ├── dashboard/
 │ └── leaguepass_dashboard.twbx
 ├── images/
-│ └── dashboard-preview.png
+│ └── nba-leaguepass-dashboard.png
 └── README.md
 
-yaml
-Copy
-Edit
-
-
----
-
-## 🚀 Run Locally
-
-```bash
-# Launch DuckDB and load the CSV
-duckdb
-
--- Example query inside DuckDB shell
-SELECT * FROM read_csv_auto('data/simulated_fans.csv') LIMIT 5;
