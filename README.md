@@ -118,12 +118,12 @@ GROUP BY engagement_tier;
 
 ## ⚙️ Tools & Tech Stack
 
-| 🧰 **Tool**     | 🔍 **Purpose**                                 |
-|----------------|-------------------------------------------------|
-| **DuckDB**     | SQL queries on local CSV files                  |
-| **Python**     | Simulate NBA League Pass data (`simulate_fans.py`) |
-| **Tableau**    | Visual storytelling & executive dashboards      |
-| **GitHub**     | Version control and project hosting             |
+| 🧰 **Tool**     | 🔍 **Purpose**                                     |
+|----------------|-----------------------------------------------------|
+| **DuckDB**     | SQL queries on local CSV files                      |
+| **Python**     | Simulate NBA League Pass data (`simulate_fans.py`)  |
+| **Tableau**    | Visual storytelling & executive dashboards          |
+| **GitHub**     | Version control and project hosting                 |
 
 ---
 
@@ -156,4 +156,11 @@ nba-leaguepass-churn-dashboard/
 ├── images/
 │ └── nba-leaguepass-dashboard.png
 └── README.md
+
+# Launch DuckDB shell
+duckdb
+
+# Query your dataset
+SELECT * FROM read_csv_auto('data/simulated_fans.csv') LIMIT 5;
+
 
