@@ -2,7 +2,7 @@
 
 **SQL + DuckDB + Tableau | Fan Engagement & Churn Storytelling**
 
-This project analyzes simulated NBA League Pass subscriber data to uncover insights into fan engagement, churn behavior, and retention strategies. It simulates real-world business dashboards you'd find at companies like Visa or FanDuel using SQL, Python, and Tableau.
+This project analyzes simulated NBA League Pass subscriber data to uncover insights into fan engagement, churn behavior, and retention strategies. It simulates real-world business dashboards using SQL, Python, and Tableau.
 
 ---
 ## 📸 Dashboard Preview
