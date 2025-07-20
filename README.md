@@ -34,6 +34,23 @@ This project simulates the role of a **Visa Insights Analyst** or **FanDuel Prod
   - Simulated churn: users who watched < 8 games = churned
   - Aggregated key metrics by segment
 
+### 📂 Data Processing Steps
+
+1. Generated synthetic NBA League Pass engagement data (CSV)
+2. Loaded data into DuckDB for SQL querying and exploration
+3. Segmented fans into **engagement tiers** based on total games watched
+4. Simulated **churn**: fans who watched fewer than 8 games were flagged as churned
+5. Aggregated key metrics:
+   - Churn Rate (%)
+   - Avg. Games Watched per Tier
+   - % of Users by Tier
+6. Exported the cleaned dataset for visualization in Tableau
+  - 
+> **Note on Churn Simulation**:  
+> For this project, *churn* is simulated based on NBA League Pass usage.  
+> Fans who watched **fewer than 8 games** during the season were labeled as **churned**, representing disengaged subscribers.  
+> This results in a **100% churn rate** for the 'Low Engagement' segment in this version.
+
 ---
 
 ## 📊 Key Dashboard Features
