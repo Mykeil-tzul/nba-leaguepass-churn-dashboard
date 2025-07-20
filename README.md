@@ -75,6 +75,36 @@ nba-leaguepass-churn-dashboard/
 
 ---
 
+## Data & Processing Steps:
+## Data & Processing Steps
+
+The data was sourced from a Kaggle dataset simulating NBA League Pass user behavior. To prepare the data for analysis and dashboarding, I followed these steps:
+
+### 1. Data Import
+- Loaded the dataset into Tableau using a CSV file format.
+
+### 2. Data Cleaning
+- Removed null entries and outliers in the `days_to_cancel` and `engagement_score` fields.
+- Renamed columns for clarity (e.g., `user_id`, `days_to_cancel`, `engagement_tier`, `churn_status`).
+
+### 3. Data Transformation (SQL)
+Used Tableau’s calculated fields and SQL logic for the following:
+- `Churn Rate %`: Calculated as `SUM(CASE WHEN churn_status = 'Churned' THEN 1 ELSE 0 END) / COUNT(user_id)`
+- `Average Days to Cancel`: `AVG(days_to_cancel)` by engagement tier
+- Engagement segmentation:
+  ```sql
+  CASE 
+    WHEN engagement_score >= 8 THEN 'High'
+    WHEN engagement_score BETWEEN 5 AND 7 THEN 'Medium'
+    ELSE 'Low'
+  END
+
+### 4. KPI Cards & Visuals
+	•	Created visualizations such as churn over time, average cancellation day, and churn rate by tier.
+	•	Used filters and parameters to allow for dynamic insights.
+
+---
+
 ## 🚀 Run Locally
 
 ```bash
