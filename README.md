@@ -84,3 +84,12 @@ nba-leaguepass-churn-dashboard/
 │
 ├── README.md
 └── dashboard.twb
+
+
+
+🧪 Simulated Churn Logic
+Churn was defined as fans who watched fewer than 8 games. This created a 100% churn rate for ‘Low’ engagement fans in this version.
+
+💡 Future versions could include probabilistic churn across all tiers.
+
+🏁
