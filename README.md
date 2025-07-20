@@ -5,6 +5,12 @@
 This project analyzes simulated NBA League Pass subscriber data to uncover insights on fan engagement, churn behavior, and retention strategy. It simulates real-world business dashboards you'd find at companies like Visa or FanDuel using SQL, Python, and Tableau.
 
 ---
+## 📸 Dashboard Preview
+
+> 🔍 This dashboard visualizes fan churn insights by engagement tier and cancel timing.
+> 
+![EFB41721-1003-4821-8B2B-61F5E4BF8585](https://github.com/user-attachments/assets/5a8459c0-b836-4436-8c89-66fe66abeeb3)
+
 
 ## 🔍 Key Insights
 
