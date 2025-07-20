@@ -85,9 +85,20 @@ nba-leaguepass-churn-dashboard/
 ├── README.md
 └── dashboard.twb
 
+## 🛠️ Challenges Faced
+
+- Balancing simplicity with realistic churn simulation using limited variables
+- Tableau filter design for intuitive storytelling across engagement segments
+
+## 🔮 Future Improvements
+
+- Add probabilistic churn model using logistic regression
+- Include features like team loyalty, star player watch frequency, or social media sentiment
+- Simulate real streaming behavior data instead of static CSV
 
 
-🧪 Simulated Churn Logic
+
+## 🧪 Simulated Churn Logic
 Churn was defined as fans who watched fewer than 8 games. This created a 100% churn rate for ‘Low’ engagement fans in this version.
 
 💡 Future versions could include probabilistic churn across all tiers.
