@@ -51,7 +51,7 @@ CASE
   ELSE 'Retained'
 END AS churn_status
 
-### 🧮 🎯 Engagement Tiers
+🎯Engagement Tiers
 
 CASE 
   WHEN games_watched < 8 THEN 'Low'
@@ -60,7 +60,7 @@ CASE
 END AS engagement_tier
 
 
-### 🧮 📈 Churn Rate + Averages
+📈 Churn Rate + Averages
 
 SELECT 
   engagement_tier,
@@ -69,8 +69,6 @@ SELECT
   SUM(CASE WHEN churn_status = 'Churned' THEN 1 ELSE 0 END) * 1.0 / COUNT(*) AS churn_rate
 FROM fan_data
 GROUP BY engagement_tier;
-
-###
 
 ---
 
