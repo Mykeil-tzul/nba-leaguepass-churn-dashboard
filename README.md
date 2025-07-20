@@ -1,86 +1,90 @@
-🏀 NBA League Pass Churn Dashboard
-SQL + DuckDB + Tableau | Fan Engagement & Churn Storytelling
+# 🏀 NBA League Pass Churn Dashboard
 
-This project analyzes simulated NBA League Pass subscriber data to uncover insights into fan engagement, churn patterns, and retention strategies. It combines SQL queries (DuckDB), visual storytelling in Tableau, and business-style KPIs to simulate a real-world data analytics project.
+**SQL + DuckDB + Tableau | Fan Engagement & Churn Storytelling**
 
-🔍 Key Insights
-Fans with low engagement churn at a 100% rate
+This project analyzes simulated NBA League Pass subscriber data to uncover insights on fan engagement, churn behavior, and retention strategy. It simulates real-world business dashboards you'd find at companies like Visa or FanDuel using SQL, Python, and Tableau.
 
-Most fans cancel around Day 53, suggesting a long decision cycle
+---
 
-High engagement fans showed 0% churn, indicating strong loyalty
+## 🔍 Key Insights
 
-Churn volume peaks between Days 40–80, showing a critical retention window
+- 🟥 **100% churn rate** among low-engagement fans
+- ⏱️ Most fans cancel around **Day 53**, indicating long trial behavior
+- 🟩 **0% churn** for high-engagement fans — strong retention
+- 📉 Churn peaks between **Days 40–80**, a critical retention window
 
-🧠 Business Objective
-This project simulates the work of a Visa Insights Analyst or FanDuel Data Analyst, focused on:
+---
 
-Diagnosing why fans churn
+## 🎯 Business Objective
 
-Segmenting users by engagement tier
+This project simulates work done by an **Insights Analyst at Visa** or a **FanDuel Product Analyst**, with goals to:
 
-Quantifying churn windows and retention KPIs
+- Diagnose **why and when** fans cancel
+- Segment users by **engagement tier**
+- Quantify **churn KPIs** and retention windows
+- Present insights via an **executive-facing Tableau dashboard**
 
-Creating a compelling Tableau dashboard for execs or product teams
+---
 
-⚙️ Tools Used
-SQL (DuckDB) — querying structured fan data for churn KPIs
+## ⚙️ Tools & Tech Stack
 
-Python — simulation and data cleanup (simulate_fans.py)
+| Tool      | Purpose                          |
+|-----------|----------------------------------|
+| **DuckDB** | SQL queries on local CSV data     |
+| **Python** | Data simulation & cleanup (`simulate_fans.py`) |
+| **Tableau**| Executive dashboard & visual storytelling |
+| **GitHub** | Version control, portfolio hosting |
 
-Tableau — interactive dashboard with metrics and churn heatmaps
+---
 
-GitHub — version control + portfolio publishing
+## 📊 Metrics Tracked
 
-📊 Metrics Tracked
-Metric	Description
-Churn Rate %	Total % of users who canceled
-Avg Days Until Cancel	Average time before churn
-Games Watched (Avg)	Proxy for fan engagement
-Engagement Tier	Grouped fans by usage: Low, Medium, High
-Churn Volume by Day	Visualized peak cancellation periods
+| KPI                      | Description |
+|--------------------------|-------------|
+| `churn_rate`             | % of fans who cancel |
+| `avg_days_to_cancel`     | Time until churn (days) |
+| `games_watched_avg`      | Engagement proxy |
+| `engagement_tier`        | Fan segmentation: Low, Med, High |
+| `daily_churn_volume`     | # of cancellations per day |
 
-📁 File Structure
-├── data/
-│   └── simulated_fans.csv
-├── sql/
-│   ├── churn_by_engagement.sql
-│   ├── churn_metrics.sql
-│   ├── time_to_cancel.sql
-│   └── games_by_churn_status.sql
-├── notebooks/
-│   └── simulate_fans.py
-├── dashboard/
-│   └── Tableau workbook (.twbx or link)
-├── README.md
+---
 
-📌 Dashboard Preview
-Embed your Tableau public link or screenshot here
-Example:
+## 🗂️ File Structure
 
-📂 Challenges Faced
-🧮 Simulating realistic churn patterns for NBA fans
+nba-leaguepass-churn-dashboard/
+├── data/ → simulated_fans.csv
+├── notebooks/ → simulate_fans.py
+├── sql/ → all analysis queries (DuckDB)
+├── dashboard/ → Tableau dashboard (.twbx or .png)
+└── README.md
 
-🔁 Aligning CSV fields for DuckDB SQL ingestion
 
-📉 Making churn storytelling intuitive for non-technical stakeholders
+---
 
-⚠️ Tableau mislabeling “Engagement Tier” as * (fixed by dragging correct field to Color shelf)
+## 📷 Dashboard Preview
 
-🚀 Try It Yourself
-# Open DuckDB shell
+> *(Add a link or screenshot preview here)*  
+> Example: ![Tableau Preview](dashboard/churn-dashboard.png)
+
+---
+
+## 🚧 Challenges Faced
+
+- 🔁 Simulating realistic churn data with variation
+- 🧮 Calculating rolling churn KPIs by tier
+- ⚙️ Handling Tableau mislabels in tiered color groups
+- ⚠️ GitHub push errors due to large files (>50MB)
+
+---
+
+## 🚀 Run Locally
+
+```bash
+# Launch DuckDB and run any SQL file
 duckdb
 
-# Query the data
+-- Example query
 SELECT * FROM read_csv_auto('data/simulated_fans.csv') LIMIT 5;
 
-Or clone and explore:
-git clone https://github.com/Mykeil-tzul/nba-leaguepass-churn-dashboard.git
 
-💼 Project Type
-Skill Demonstration: SQL, Tableau, storytelling, data simulation
-
-Target Role: Data Analyst / Insights Analyst / Product Analyst
-
-👤 Created By
-Mykeil Tzul 🏀 x 📊 x 💡
+Made by Myke Tzul
