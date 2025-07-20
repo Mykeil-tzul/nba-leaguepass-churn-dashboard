@@ -4,9 +4,9 @@
 
 This project explores subscriber engagement and churn within NBA League Pass. Fans are segmented into engagement tiers (High, Mid, Low), and churn is simulated based on how many games they watched during the season.
 
-The dashboard visualizes key KPIs like churn %, average games watched, and cancellation timing. This mirrors work done by Insights or Product Analysts at companies like **Visa**, **NBA**, and **FanDuel**.
+The dashboard visualizes key KPIs like churn %, average games watched, and cancellation timing.
 
-![Dashboard Preview](preview/dashboard.png)
+![EFB41721-1003-4821-8B2B-61F5E4BF8585](https://github.com/user-attachments/assets/5a8459c0-b836-4436-8c89-66fe66abeeb3)
 
 ---
 
