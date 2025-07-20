@@ -64,14 +64,6 @@ nba-leaguepass-churn-dashboard/
 ├── dashboard/ → Tableau dashboard (.twbx or .png)
 └── README.md
 
-
----
-
-## 📷 Dashboard Preview
-
-> *(Add a link or screenshot preview here)*  
-> Example: ![Tableau Preview](dashboard/churn-dashboard.png)
-
 ---
 
 ## 🚧 Challenges Faced
