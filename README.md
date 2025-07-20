@@ -119,5 +119,13 @@ nba-leaguepass-churn-dashboard/
 └── dashboard.twb
 
 
+## ▶️ How to Reproduce
+
+1. Clone the repo  
+2. Open DuckDB and run the SQL logic in `sql/leaguepass_churn_query.sql`  
+3. Explore or export the results  
+4. Open the Tableau dashboard in `/dashboard`  
+
+
 
 🏁
