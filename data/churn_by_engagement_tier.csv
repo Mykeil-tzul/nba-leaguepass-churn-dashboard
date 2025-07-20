@@ -1,0 +1,4 @@
+engagement_tier,total_fans,churned_fans,churn_rate_pct
+High,1376,0,0.0
+Low,547,547,100.0
+Medium,3077,860,27.95
