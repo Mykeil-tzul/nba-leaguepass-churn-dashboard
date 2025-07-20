@@ -75,7 +75,6 @@ nba-leaguepass-churn-dashboard/
 
 ---
 
-## Data & Processing Steps:
 ## Data & Processing Steps
 
 The data was sourced from a Kaggle dataset simulating NBA League Pass user behavior. To prepare the data for analysis and dashboarding, I followed these steps:
