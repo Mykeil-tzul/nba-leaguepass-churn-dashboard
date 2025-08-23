@@ -1,4 +1,4 @@
-# 🏀 NBA League Pass Churn Dashboard
+# NBA League Pass Churn Dashboard
 
 **SQL + DuckDB + Tableau | Fan Engagement & Churn Storytelling**
 
@@ -6,18 +6,18 @@ This project explores subscriber engagement and churn within NBA League Pass. Fa
 
 ---
 
-## 🎯 Business Objective
+## Business Objective
 
 This project simulates the role of a **Visa Insights Analyst** or **FanDuel Product Analyst** by answering:
 
-- 🧠 Who is at risk of canceling?
-- ⏱️ When do most fans cancel?
-- 📊 How does engagement impact churn?
-- 📈 What actions can reduce churn?
+- Who is at risk of canceling?
+- When do most fans cancel?
+- How does engagement impact churn?
+- What actions can reduce churn?
 
 ---
 
-## 🔄 Data Pipeline Summary
+## Data Pipeline Summary
 
 - **Data Source**: Simulated NBA League Pass engagement data (CSV)
 - **Tech Stack**:
@@ -30,7 +30,7 @@ This project simulates the role of a **Visa Insights Analyst** or **FanDuel Prod
   - Simulated churn: users who watched < 8 games = churned
   - Aggregated key metrics by segment
 
-### 📂 Data Processing Steps
+### Data Processing Steps
 
 1. Generated synthetic NBA League Pass engagement data (CSV)
 2. Loaded data into DuckDB for SQL querying and exploration
@@ -51,34 +51,34 @@ The dashboard visualizes key KPIs like churn %, average games watched, and cance
 
 ![EFB41721-1003-4821-8B2B-61F5E4BF8585](https://github.com/user-attachments/assets/5a8459c0-b836-4436-8c89-66fe66abeeb3)
 
-## 🛠️ Challenges Faced
+## Challenges Faced
 
 - Balancing simplicity with realistic churn simulation using limited variables
 - Tableau filter design for intuitive storytelling across engagement segments
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - Add probabilistic churn model using logistic regression
 - Include features like team loyalty, star player watch frequency, or social media sentiment
 - Simulate real streaming behavior data instead of static CSV
 
-## 🧪 Simulated Churn Logic
+## Simulated Churn Logic
 Churn was defined as fans who watched fewer than 8 games. This created a 100% churn rate for ‘Low’ engagement fans in this version.
 
 💡 Future versions could include probabilistic churn across all tiers.
   
 ---
 
-## 📊 Key Dashboard Features
+## Key Dashboard Features
 
-- 📉 **Churn Rate by Segment**: Highlights risk level per tier
-- ⏳ **Average Games Watched**: Usage insights per user group
-- 📅 **Cancellation Timeline**: When are users most likely to churn?
-- 🎯 **Segment Comparisons**: Mid vs Low vs High engagement
+- **Churn Rate by Segment**: Highlights risk level per tier
+- **Average Games Watched**: Usage insights per user group
+- **Cancellation Timeline**: When are users most likely to churn?
+- **Segment Comparisons**: Mid vs Low vs High engagement
 
 ---
 
-## 🧠 Business Insights
+## Business Insights
 
 - Fans in the **Low Engagement** tier churn at a **100% rate**.
 - Most churn occurs early in the season, indicating weak retention.
@@ -87,7 +87,7 @@ Churn was defined as fans who watched fewer than 8 games. This created a 100% ch
 
 ---
 
-## 🛠️ Tools Used
+## Tools Used
 
 | Tool     | Purpose                      |
 |----------|------------------------------|
@@ -98,7 +98,7 @@ Churn was defined as fans who watched fewer than 8 games. This created a 100% ch
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```plaintext
 nba-leaguepass-churn-dashboard/
@@ -119,7 +119,7 @@ nba-leaguepass-churn-dashboard/
 └── dashboard.twb
 
 
-## ▶️ How to Reproduce
+## How to Reproduce
 
 1. Clone the repo  
 2. Open DuckDB and run the SQL logic in `sql/leaguepass_churn_query.sql`  
